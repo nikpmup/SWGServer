@@ -1,0 +1,4 @@
+FROM mysql:5
+
+COPY ./sql /docker-entrypoint-initdb.d/
+COPY ./core3/MMOCoreORB/sql/swgemu.sql /docker-entrypoint-initdb.d/01-swgemu.sql

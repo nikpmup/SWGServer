@@ -1,0 +1,17 @@
+# syntax=docker/dockerfile:1
+FROM ubuntu:20.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \
+    build-essential \
+    libmysqlclient-dev \
+    liblua5.3-dev \
+    libdb5.3-dev \
+    libssl-dev \
+    cmake \
+    git \
+    default-jre \
+    libssl-dev \
+    ninja-build \
+    vim
